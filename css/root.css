@@ -1,0 +1,136 @@
+/*GENERAL*/ /*BODY*/
+body {
+  display: flex;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  margin: 0px auto 0px auto;
+  flex-direction: column;
+  text-align: center;
+}
+body .section__title {
+  text-align: left;
+}
+body .section__functioning .section__functioning__steps {
+  background-color: var(--main-color);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0px 0px 15px 5%;
+  width: 95%;
+  border-radius: 20px;
+  box-shadow: 0px 2px 5px 0px gray;
+}
+body .section__functioning .section__functioning__steps .section__functioning__steps_number {
+  background-color: var(--primary-color);
+  border-radius: 13px;
+  padding: 4px 8px;
+  color: white;
+  position: absolute;
+  left: 7.5%;
+}
+body .section__functioning .section__functioning__steps .section__functioning__steps_icon {
+  color: #7E7E7E;
+  margin: 0px 5% 0px 10%;
+}
+body .section__restaurants {
+  background-color: var(--main-color);
+}
+body .section__restaurants .section__restaurants__stores {
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  justify-content: left;
+}
+body .section__restaurants .section__restaurants__stores__images {
+  border-radius: 10px 10px 0px 0px;
+  object-fit: cover;
+  width: 100%;
+  height: 50%;
+}
+body .length-to-remove-before-delivering {
+  height: 1001px;
+}
+
+/*HEADER*/
+header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+header .header__logo {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  object-fit: contain;
+}
+header .header__div {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--banner-color);
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  color: #353535;
+  box-shadow: 0px 6px 10px -6px grey inset;
+}
+header .header__div__location__dot {
+  margin-right: 15px;
+}
+header .header__menu {
+  background-color: var(--main-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 30px 0px 20px 0px;
+}
+header .header__menu .header__menu__h1 {
+  width: 70%;
+}
+header .header__menu .header__menu__p {
+  width: 90%;
+}
+
+:root {
+  --main-color: #F3F3F3; /* var(--main-color) */
+  --pop-up-color: #99e2d0; /* var(--pop-up-color) */
+  --button-text-color: #028766; /* var(--button-text-color) */
+  --light-blue-color: #89C8FA; /* var(--light-blue-color) */
+  --dark-blue-color: #003A68; /* var(--dark-blue-color) */
+  --primary-color: #9356DC; /* var(--primary-color) */
+  --secondary-color: #FF79DA; /* var(--secondary-color) */
+  --tertiary-color: #99E2D0; /* var(--tertiary-color) */
+  --banner-color: #EAEAEA; /* var(--banner-color) */
+}
+:root section {
+  padding: 35px 5% 35px 5%;
+}
+:root h1 {
+  font-size: 1.6em;
+}
+:root h3 {
+  font-weight: 400;
+  font-size: 1em;
+}
+:root p {
+  font-size: 1.1em;
+  font-weight: 300;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+}
+:root button {
+  background: linear-gradient(var(--secondary-color), var(--primary-color));
+  color: white;
+  border-radius: 25px;
+  padding: 15px 20px 15px 20px;
+  margin: 30px 0px 30px 0px;
+  border: none;
+  box-shadow: 0px 2px 5px 0px gray;
+}
+
+/*# sourceMappingURL=root.css.map */

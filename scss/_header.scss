@@ -1,0 +1,49 @@
+/*HEADER*/
+
+header {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+    
+    .header__logo {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        object-fit: contain;
+    }
+
+    .header__div {
+        display: flex;
+        flex-direction: row;
+        background-color: var(--banner-color);
+        width : 100%;
+        justify-content: center;
+        align-items: center;
+        color: #353535;
+        box-shadow: 0px 6px 10px -6px grey inset;    
+    }
+
+    .header__div__location__dot {
+        margin-right: 15px;
+    }
+
+    .header__menu {
+        background-color: var(--main-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 30px 0px 20px 0px;
+
+        .header__menu__h1 {
+            width: 70%;
+        }
+
+        .header__menu__p {
+            width: 90%;
+        }
+    }
+}
