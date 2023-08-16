@@ -78,14 +78,14 @@ body {
 		background: white;
 		z-index: 100;
 		opacity: 1;
-		animation: 0.1s both 0.1s fadeOut;
+		animation: 2s both 2s fadeOut;
 
 		.loader__wrapper__logo {
 			width: 50%;
 			top: 50%;
 			left: 25%;
 			position: fixed;
-			animation: 0.1s both upaAndDown;
+			animation: 2s both upaAndDown;
 		}
 	}
 
