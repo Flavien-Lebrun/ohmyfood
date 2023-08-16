@@ -1,4 +1,51 @@
 /*GENERAL*/ /*BODY*/
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+@-moz-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-o-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-ms-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes upaAndDown {
+  0% {
+    top: 50%;
+  }
+  25% {
+    top: 40%;
+  }
+  75% {
+    top: 60%;
+  }
+  100% {
+    top: 50%;
+  }
+}
 body {
   display: flex;
   justify-content: center;
@@ -9,6 +56,23 @@ body {
   flex-direction: column;
   text-align: center;
 }
+body .loader__wrapper {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  z-index: 100;
+  opacity: 1;
+  animation: 0.1s both 0.1s fadeOut;
+}
+body .loader__wrapper .loader__wrapper__logo {
+  width: 50%;
+  top: 50%;
+  left: 25%;
+  position: fixed;
+  animation: 0.1s both upaAndDown;
+}
 body .section__title {
   text-align: left;
 }
@@ -18,22 +82,27 @@ body .section__functioning .section__functioning__steps {
   flex-direction: row;
   align-items: center;
   margin: 0px 0px 15px 5%;
+  padding: 7px 0px 7px 0px;
   width: 95%;
   border-radius: 20px;
   box-shadow: 0px 2px 5px 0px gray;
 }
 body .section__functioning .section__functioning__steps .section__functioning__steps_number {
   background-color: var(--primary-color);
-  border-radius: 13px;
-  padding: 4px 8px;
+  border-radius: 15px;
+  padding: 4px 11px;
   color: white;
   position: absolute;
   left: 7.5%;
+  font-weight: 500;
 }
 body .section__functioning .section__functioning__steps .section__functioning__steps_icon {
   color: #7E7E7E;
   margin: 0px 5% 0px 10%;
   font-size: 1.2em;
+}
+body .section__functioning .section__functioning__steps .section__functioning__steps_icon:hover {
+  color: var(--primary-color);
 }
 body .section__restaurants {
   background-color: var(--main-color);
@@ -44,33 +113,63 @@ body .section__restaurants .section__restaurants__stores {
   display: flex;
   justify-content: left;
   flex-wrap: wrap;
+  margin-bottom: 20px;
 }
-body .section__restaurants .section__restaurants__stores .section__restaurants__stores__images {
-  border-radius: 10px 10px 0px 0px;
-  object-fit: cover;
+body .section__restaurants .section__restaurants__stores .section__restaurants__stores__a {
   width: 100%;
-  height: 50%;
 }
-body .section__restaurants .section__restaurants__stores .section__restaurants__stores__description {
-  padding: 10px;
+body .section__restaurants .section__restaurants__stores .section__restaurants__stores__a .section__restaurants__stores__a__div {
+  height: 180px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 15px 15px 0px 0px;
+  background-size: cover;
+  background-clip: border-box;
+  background-position: bottom;
+}
+body .section__restaurants .section__restaurants__stores .section__restaurants__stores__a .section__restaurants__stores__a__div-1 {
+  background-image: url("../Restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+}
+body .section__restaurants .section__restaurants__stores .section__restaurants__stores__a .section__restaurants__stores__a__div-2 {
+  background-image: url("../Restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+}
+body .section__restaurants .section__restaurants__stores .section__restaurants__stores__a .section__restaurants__stores__a__div-3 {
+  background-image: url("../Restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+}
+body .section__restaurants .section__restaurants__stores .section__restaurants__stores__a .section__restaurants__stores__a__div-4 {
+  background-image: url("../Restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+}
+body .section__restaurants .section__restaurants__stores .section__restaurants__stores__a .section__restaurants__stores__a__div .section__restaurants__stores__a__div__new {
+  background-color: var(--pop-up-color);
+  color: var(--button-text-color);
+  padding: 9px 11px 9px 11px;
+  border-radius: 2px;
+  position: absolute;
+  right: 35px;
+  width: 20%;
+}
+body .section__restaurants .section__restaurants__stores .section__restaurants__stores__a__description {
+  padding: 14px 5px 20px 14px;
   display: flex;
   flex-direction: row;
 }
-body .section__restaurants .section__restaurants__stores .section__restaurants__stores__description .section__restaurants__stores__description__text {
+body .section__restaurants .section__restaurants__stores .section__restaurants__stores__a__description .section__restaurants__stores__a__description__text {
   display: flex;
   flex-direction: column;
   text-align: left;
 }
-body .section__restaurants .section__restaurants__stores .section__restaurants__stores__favourite {
+body .section__restaurants .section__restaurants__stores .section__restaurants__stores__a__description .section__restaurants__stores__a__description__div {
   font-size: 1.5em;
-  margin: auto;
+  margin: auto 15px auto auto;
 }
-body .section__restaurants .section__restaurants__stores .section__restaurants__stores__favourite-transparent {
+body .section__restaurants .section__restaurants__stores .section__restaurants__stores__a__description .section__restaurants__stores__a__description__div-transparent {
+  position: absolute;
   color: transparent;
-  position: fixed;
 }
-body .section__restaurants .section__restaurants__stores .section__restaurants__stores__favourite-transparent :hover {
+body .section__restaurants .section__restaurants__stores .section__restaurants__stores__a__description .section__restaurants__stores__a__description__div-transparent:hover {
   background: linear-gradient(var(--primary-color), var(--secondary-color));
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 body .length-to-remove-before-delivering {
   height: 1001px;
@@ -95,14 +194,15 @@ header .header__div {
   flex-direction: row;
   background-color: var(--banner-color);
   width: 100%;
+  padding: 5px;
   justify-content: center;
   align-items: center;
   color: #353535;
   box-shadow: 0px 6px 10px -6px grey inset;
 }
 header .header__div__location__dot {
-  margin-right: 15px;
-  font-size: 1.2em;
+  margin-right: 18px;
+  font-size: 1.3em;
 }
 header .header__menu {
   background-color: var(--main-color);
@@ -131,19 +231,27 @@ header .header__menu .header__menu__p {
   --tertiary-color: #99E2D0; /* var(--tertiary-color) */
   --banner-color: #EAEAEA; /* var(--banner-color) */
 }
+:root body {
+  font-family: "Raleway", sans-serif;
+}
 :root section {
   padding: 35px 5% 35px 5%;
 }
 :root h1 {
   font-size: 1.6em;
 }
+:root h2 {
+  margin-block-end: 0.4em;
+  margin-block-start: 0.4em;
+  font-size: 1.2em;
+}
 :root h3 {
-  font-weight: 400;
-  font-size: 1em;
+  font-weight: 600;
+  font-size: 1.05em;
 }
 :root p {
-  font-size: 1.1em;
-  font-weight: 300;
+  font-size: 1.2em;
+  font-weight: 200;
   margin-block-start: 0px;
   margin-block-end: 0px;
 }
