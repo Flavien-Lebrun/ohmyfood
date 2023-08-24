@@ -14,16 +14,7 @@
 	}
 	100% { 
 		opacity : 0;
-		display: none;
-	}
-  }
-
-@-moz-keyframes fadeOut {
-	0% { 
-		opacity : 1;
-	}
-	100% { 
-		opacity : 0;
+		visibility: hidden;
 	}
 }
 
@@ -33,6 +24,7 @@
 	}
 	100% { 
 		opacity : 0;
+		display: none;
 	}
 }
 
@@ -42,10 +34,38 @@
 	}
 	100% { 
 		opacity : 0;
+		display: none;
 	}
 }
 
-@keyframes upaAndDown {
+@keyframes fadeIn {
+	0% { 
+		opacity: 0;
+	}
+	100% { 
+		opacity : 1;
+	}
+}
+
+@-o-keyframes fadeIn {
+	0% { 
+		opacity: 0;
+	}
+	100% { 
+		opacity : 1;
+	}
+}
+
+@-ms-keyframes fadeIn {
+	0% { 
+		opacity: 0;
+	}
+	100% { 
+		opacity : 1;
+	}
+}
+
+@keyframes upAndDown {
 	0% {
 		top: 46%;
 	}
@@ -59,6 +79,38 @@
 		top: 46%;
 	}
 }
+
+@-o-keyframes upAndDown {
+	0% {
+		top: 46%;
+	}
+	25% {
+		top: 36%;
+	}
+	75% {
+		top: 56%;
+	}
+	100% {
+		top: 46%;
+	}
+}
+
+@-ms-keyframes upAndDown {
+	0% {
+		top: 46%;
+	}
+	25% {
+		top: 36%;
+	}
+	75% {
+		top: 56%;
+	}
+	100% {
+		top: 46%;
+	}
+}
+
+/*HOMEPAGE*/
 
 body {
 	display: flex;
@@ -78,14 +130,15 @@ body {
 		background: white;
 		z-index: 100;
 		opacity: 1;
-		animation: fadeOut 2s 3s both;
+		animation: fadeOut 2s 4s forwards;
 
 		.loader__wrapper__logo {
+			opacity: 0;
 			width: 50%;
 			top: 46%;
 			left: 25%;
 			position: fixed;
-			animation: upaAndDown 2s 1s both;
+			animation: fadeIn 2s forwards, upAndDown 2s 2s both;
 		}
 	}
 
@@ -181,6 +234,7 @@ body {
 	
 			.section__restaurants__stores__a__description {
 				padding: 14px 5px 20px 14px;
+				width: 100%;
 				display: flex;
 				flex-direction: row;
 
@@ -192,17 +246,22 @@ body {
 				
 				.section__restaurants__stores__a__description__div {
 					font-size: 1.5em;
-					margin: auto 15px auto auto;
+					margin: auto 15px auto 30px;
 
-					&-transparent {
+					&--transparent {
 						position: absolute;
 						color: transparent;
-					
-						&:hover {
-							@include gradient-reversed;
-							background-clip: text;
-							-webkit-background-clip: text;
-						}
+					}
+				}
+
+				input[type="checkbox"] {
+					position: absolute;
+					opacity: 0;
+					&:checked +.section__restaurants__stores__a__description__div--transparent {
+						@include gradient-reversed;
+						animation: fadeIn 0.5s forwards;
+						background-clip: text;
+						-webkit-background-clip: text;
 					}
 				}
 			}
@@ -219,23 +278,48 @@ body {
 
 		.footer__logo {
 			font-family: 'Shrikhand', cursive;
-			margin-bottom: 15px;
+			margin-bottom: 8px;
 		}
 
 		.footer__div {
 			display: flex;
 			flex-direction: row;
-			font-size: 1.2em;
+			width: 100%;
+			margin-top: 7px;
+
 
 			.footer__div__i {
 				display: flex;
 				align-items: center;
-				margin-right: 1%;
+				margin-right: 5%;
+
+				&--ustensils {
+					font-size: 0.9em;
+				}
+
+				&--handshake {
+					font-size: 0.7em;
+				}
 			}
 		}
 	}
 
 	.length-to-remove-before-delivering {
 		height: 1001px;
+	}
+}
+
+/*MENU*/
+
+body {
+
+	.menu__image {
+		width: 100%;
+		height: 260px;
+	}
+
+	.section__menu {
+		
+
 	}
 }

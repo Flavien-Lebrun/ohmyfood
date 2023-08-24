@@ -5,6 +5,14 @@ header {
 	justify-content: space-between;
 	flex-wrap: wrap;
     
+    .header__back {
+        position: absolute;
+        top: 25px;
+        left: 6%;
+        font-size: 1.5em;
+        color: var(--footer-color);
+    }
+
     .header__logo {
         width: 50%;
         margin-left: auto;
