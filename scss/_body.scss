@@ -320,6 +320,10 @@ body {
 
 	.section__menu {
 		
-
+		.section__menu__title {
+			display: flex;
+			flex-direction: row;
+			font-family: 'Shrikhand', cursive;
+		}
 	}
 }
