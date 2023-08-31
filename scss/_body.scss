@@ -1,11 +1,26 @@
 /*BODY*/
 
 @mixin shadow {
-	box-shadow: 0px 2px 5px 0px gray;
+	box-shadow: 0px 3px 13px #808080ad;
+
+	&:hover {
+		box-shadow: 0px 3px 13px #747474;
+	}
+}
+
+@mixin gradient {
+	background: linear-gradient(var(--secondary-color), var(--primary-color));
 }
 
 @mixin gradient-reversed {
 	background: linear-gradient(var(--primary-color), var(--secondary-color));
+}
+
+@mixin ellipsis {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: start;
 }
 
 @keyframes fadeOut {
@@ -115,7 +130,7 @@
 body {
 	display: flex;
 	justify-content: center;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Raleway', sans-serif;
 	font-style: normal;
 	font-weight: 500;
 	margin: 0px auto 0px auto;
@@ -244,27 +259,28 @@ body {
 					text-align: left;
 				}
 				
-				.section__restaurants__stores__a__description__div {
-					font-size: 1.5em;
-					margin: auto 15px auto 30px;
-
-					&--transparent {
-						position: absolute;
-						color: transparent;
-					}
-				}
-
-				input[type="checkbox"] {
-					position: absolute;
-					opacity: 0;
-					&:checked +.section__restaurants__stores__a__description__div--transparent {
-						@include gradient-reversed;
-						animation: fadeIn 0.5s forwards;
-						background-clip: text;
-						-webkit-background-clip: text;
-					}
-				}
 			}
+		}
+	}
+
+	.section__restaurants__stores__a__description__div {
+		font-size: 1.5em;
+		margin: auto 15px auto 30px;
+
+		&--transparent {
+			position: absolute;
+			color: transparent;
+		}
+	}
+
+	input[type="checkbox"] {
+		position: absolute;
+		opacity: 0;
+		&:checked +.section__restaurants__stores__a__description__div--transparent {
+			@include gradient-reversed;
+			animation: fadeIn 0.5s forwards;
+			background-clip: text;
+			-webkit-background-clip: text;
 		}
 	}
 
@@ -306,24 +322,5 @@ body {
 
 	.length-to-remove-before-delivering {
 		height: 1001px;
-	}
-}
-
-/*MENU*/
-
-body {
-
-	.menu__image {
-		width: 100%;
-		height: 260px;
-	}
-
-	.section__menu {
-		
-		.section__menu__title {
-			display: flex;
-			flex-direction: row;
-			font-family: 'Shrikhand', cursive;
-		}
 	}
 }

@@ -2,9 +2,10 @@
 
 @import "body";
 @import "header";
+@import "menu";
 
 :root {
-    --main-color: #F3F3F3; /* var(--main-color) */
+    --main-color: #F6F6F6; /* var(--main-color) */
     --pop-up-color: #99e2d0; /* var(--pop-up-color) */
     --button-text-color: #028766; /* var(--button-text-color) */
     --light-blue-color: #89C8FA; /* var(--light-blue-color) */
@@ -14,22 +15,6 @@
     --tertiary-color: #99E2D0; /* var(--tertiary-color) */
     --banner-color: #EAEAEA; /* var(--banner-color) */
     --footer-color: #353535; /* var(--footer-color) */
-
-    body {
-        font-family: 'Raleway', sans-serif;
-    }
-
-    @mixin shadow {
-        box-shadow: 0px 3px 13px #808080ad;
-
-        &:hover {
-            box-shadow: 0px 3px 13px #747474;
-        }
-    }
-
-    @mixin gradient {
-        background: linear-gradient(var(--secondary-color), var(--primary-color));
-    }
 
     section {
         padding: 35px 5% 35px 5%;
@@ -51,9 +36,8 @@
     }
 
     p {
-        font-family: "Roboto", sans-serif;
         font-size: 1.1em;
-        font-weight: 100;
+        font-weight: 300;
         margin-block-start: 0px;
         margin-block-end: 0px;
     }
