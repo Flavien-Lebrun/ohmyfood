@@ -428,6 +428,11 @@ body .section__menu .section__menu__content .section__menu__content__dishes .sec
   width: 51%;
   height: 100%;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.3em;
 }
 
 :root {
