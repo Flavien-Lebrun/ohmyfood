@@ -1,32 +1,5 @@
 /*MENU*/
 
-@keyframes addedPopUp {
-    0% { 
-		margin-right: -16%;
-	}
-	100% { 
-		margin-right: 0%;
-	}
-}
-
-@-o-keyframes addedPopUp {
-    0% { 
-		margin-right: -16%;
-	}
-	100% { 
-		margin-right: 0%;
-	}
-}
-
-@-ms-keyframes addedPopUp {
-    0% { 
-		margin-right: -16%;
-	}
-	100% { 
-		margin-right: 0%;
-	}
-}
-
 header {
 
     .header__back {
@@ -56,6 +29,7 @@ body {
 			flex-direction: row;
 			font-family: 'Shrikhand', cursive;
             font-size: 1.14em;
+            margin-bottom: 0px;
 		}
 
         .section__menu__content {
@@ -63,6 +37,11 @@ body {
             display: flex;
             flex-wrap: wrap;
             padding: initial;
+
+            h3 {
+                margin-bottom: 5px;
+                font-weight: 300;
+            }
 
             .section__menu__content__title {
                 border-bottom: 4px solid var(--pop-up-color);
@@ -79,8 +58,9 @@ body {
                 overflow: hidden;
                 @include shadow;
 
-                &:hover +.section__menu__content__dishes__price {
-                    animation: addedPopUp 0.5s forwards;
+                &:hover .section__menu__content__dishes__price {
+                    margin-right: 0%;
+                    transition: 0.5s;
                 }
 
                 .section__menu__content__dishes__description {
@@ -106,10 +86,7 @@ body {
                     align-items: end;
                     width: 30%;
                     margin-right: -16%;
-
-                    &:hover {
-                        animation: addedPopUp 0.5s forwards;
-                    }
+                    transition: 0.5s;
 
                     .section__menu__content__dishes__price__h4 {
                         margin: 0px;
