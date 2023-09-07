@@ -273,7 +273,7 @@ body {
 		}
 	}
 
-	input[type="checkbox"] {
+	.favorite {
 		position: absolute;
 		opacity: 0;
 		&:checked +.section__restaurants__stores__a__description__div--transparent {

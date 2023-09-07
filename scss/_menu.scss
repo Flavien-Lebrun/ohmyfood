@@ -1,5 +1,32 @@
 /*MENU*/
 
+@keyframes addedPopUp {
+    0% { 
+		margin-right: -16%;
+	}
+	100% { 
+		margin-right: 0%;
+	}
+}
+
+@-o-keyframes addedPopUp {
+    0% { 
+		margin-right: -16%;
+	}
+	100% { 
+		margin-right: 0%;
+	}
+}
+
+@-ms-keyframes addedPopUp {
+    0% { 
+		margin-right: -16%;
+	}
+	100% { 
+		margin-right: 0%;
+	}
+}
+
 header {
 
     .header__back {
@@ -47,13 +74,18 @@ body {
                 justify-content: space-between;
                 background-color: white;
                 width: 100%;
-                padding: 15px;
                 border-radius: 20px;
                 margin-bottom: 15px;
+                overflow: hidden;
                 @include shadow;
+
+                &:hover +.section__menu__content__dishes__price {
+                    animation: addedPopUp 0.5s forwards;
+                }
 
                 .section__menu__content__dishes__description {
                     overflow: hidden;
+                    padding: 15px;
 
                     .section__menu__content__dishes__description__h4 {
                         margin: 0px;
@@ -72,15 +104,29 @@ body {
                 .section__menu__content__dishes__price {
                     display: flex;
                     align-items: end;
-                    padding-left: 10px;
+                    width: 30%;
+                    margin-right: -16%;
 
+                    &:hover {
+                        animation: addedPopUp 0.5s forwards;
+                    }
+                    
                     .section__menu__content__dishes__price__h4 {
                         margin: 0px;
                         font-size: 1.2em;
                         font-weight: 600;
+                        padding: 0px 15px 15px 0px;
+                        overflow: visible;
                         @include ellipsis;
                     }
-                }   
+                        
+                    .section__menu__content__dishes__price__added {
+                    background-color: var(--pop-up-color);
+                    width: 51%;
+                    height: 100%;
+                    overflow: hidden;
+                    }
+                }
             }
         }
 	}
