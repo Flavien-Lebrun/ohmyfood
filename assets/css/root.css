@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*GENERAL*/ /*BODY*/
 @keyframes fadeOut {
   0% {
@@ -123,6 +124,9 @@ body .loader__wrapper .loader__wrapper__logo {
 }
 body .section__title {
   text-align: left;
+}
+body .section__landing__page {
+  padding: 35px 5% 35px 5%;
 }
 body .section__functioning .section__functioning__steps {
   background-color: var(--main-color);
@@ -270,10 +274,7 @@ header {
 }
 header .header__logo {
   width: 50%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 20px auto 20px auto;
   object-fit: contain;
 }
 header .header__div {
@@ -308,6 +309,19 @@ header .header__menu .header__menu__p {
 }
 
 /*MENU*/
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+header {
+  background-color: white;
+}
 header .header__back {
   position: absolute;
   top: 25px;
@@ -316,15 +330,59 @@ header .header__back {
   color: var(--footer-color);
 }
 
+body {
+  background-color: var(--main-color);
+}
 body .menu__image {
   width: 100%;
   height: 260px;
+}
+body .menu__list {
+  list-style: initial; /* Rétablir le style de liste par défaut */
+  padding-left: initial; /* Rétablir le padding par défaut */
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+body .menu__item {
+  opacity: 0;
+  animation: appear 2s forwards;
+  width: 100%;
+}
+body .menu__item:nth-child(1) {
+  animation-delay: 2s;
+}
+body .menu__item:nth-child(2) {
+  animation-delay: 4s;
+}
+body .menu__item:nth-child(3) {
+  animation-delay: 6s;
+}
+body .menu__item:nth-child(4) {
+  animation-delay: 8s;
+}
+body .menu__item:nth-child(5) {
+  animation-delay: 10s;
+}
+body .menu__item:nth-child(6) {
+  animation-delay: 12s;
+}
+body .menu__item:nth-child(7) {
+  animation-delay: 14s;
+}
+body .menu__item:nth-child(8) {
+  animation-delay: 16s;
+}
+body .menu__item:nth-child(9) {
+  animation-delay: 18s;
 }
 body .section__menu {
   background-color: var(--main-color);
   position: relative;
   bottom: 50px;
   border-radius: 50px 50px 0px 0px;
+  padding-bottom: 0px;
+  padding: 35px 5% 0px 5%;
 }
 body .section__menu .section__menu__title {
   display: flex;
@@ -426,9 +484,6 @@ body .section__menu .section__menu__content .section__menu__content__dishes .sec
   --tertiary-color: #99E2D0; /* var(--tertiary-color) */
   --banner-color: #EAEAEA; /* var(--banner-color) */
   --footer-color: #353535; /* var(--footer-color) */
-}
-:root section {
-  padding: 35px 5% 35px 5%;
 }
 :root h1 {
   font-size: 1.6em;

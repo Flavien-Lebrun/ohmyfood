@@ -1,6 +1,18 @@
 /*MENU*/
 
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: translateY(+20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 header {
+    background-color: white;
 
     .header__back {
         position: absolute;
@@ -12,17 +24,72 @@ header {
 }
 
 body {
+    background-color: var(--main-color);
 
-	.menu__image {
-		width: 100%;
-		height: 260px;
-	}
+	.menu {
+    
+        &__image {
+            width: 100%;
+            height: 260px;
+        }
+
+        &__list {
+            list-style: initial; /* Rétablir le style de liste par défaut */
+            padding-left: initial; /* Rétablir le padding par défaut */
+            list-style: none;
+            padding: 0;
+            width: 100%;
+        }
+
+        &__item {
+            opacity: 0;
+            animation: appear 2s forwards;
+            width: 100%;
+
+            &:nth-child(1) {
+                animation-delay: 2s;
+            }
+
+            &:nth-child(2) {
+                animation-delay: 4s;
+            }
+
+            &:nth-child(3) {
+                animation-delay: 6s;
+            }
+
+            &:nth-child(4) {
+                animation-delay: 8s;
+            }
+
+            &:nth-child(5) {
+                animation-delay: 10s;
+            }
+
+            &:nth-child(6) {
+                animation-delay: 12s;
+            }
+
+            &:nth-child(7) {
+                animation-delay: 14s;
+            }
+            &:nth-child(8) {
+                animation-delay: 16s;
+            }
+
+            &:nth-child(9) {
+                animation-delay: 18s;
+            }
+        }
+    }
 
 	.section__menu {
         background-color: var(--main-color);
         position: relative;
         bottom: 50px;
         border-radius: 50px 50px 0px 0px;
+        padding-bottom: 0px;
+        padding: 35px 5% 0px 5%;
 		
 		.section__menu__title {
 			display: flex;
