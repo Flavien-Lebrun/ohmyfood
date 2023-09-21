@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*GENERAL*/ /*BODY*/
 @keyframes fadeOut {
   0% {
@@ -125,8 +124,8 @@ body .loader__wrapper .loader__wrapper__logo {
 body .section__title {
   text-align: left;
 }
-body .section__landing__page {
-  padding: 35px 5% 35px 5%;
+body .section__functioning {
+  background-color: white;
 }
 body .section__functioning .section__functioning__steps {
   background-color: var(--main-color);
@@ -201,7 +200,7 @@ body .section__restaurants .section__restaurants__stores .section__restaurants__
   padding: 9px 11px 9px 11px;
   border-radius: 2px;
   position: absolute;
-  right: 35px;
+  right: 40px;
   width: 20%;
 }
 body .section__restaurants .section__restaurants__stores .section__restaurants__stores__a__description {
@@ -337,49 +336,11 @@ body .menu__image {
   width: 100%;
   height: 260px;
 }
-body .menu__list {
-  list-style: initial; /* Rétablir le style de liste par défaut */
-  padding-left: initial; /* Rétablir le padding par défaut */
-  list-style: none;
-  padding: 0;
-  width: 100%;
-}
-body .menu__item {
-  opacity: 0;
-  animation: appear 2s forwards;
-  width: 100%;
-}
-body .menu__item:nth-child(1) {
-  animation-delay: 0.5s;
-}
-body .menu__item:nth-child(2) {
-  animation-delay: 1s;
-}
-body .menu__item:nth-child(3) {
-  animation-delay: 1.5s;
-}
-body .menu__item:nth-child(4) {
-  animation-delay: 2s;
-}
-body .menu__item:nth-child(5) {
-  animation-delay: 2.5s;
-}
-body .menu__item:nth-child(6) {
-  animation-delay: 3s;
-}
-body .menu__item:nth-child(7) {
-  animation-delay: 3.5s;
-}
-body .menu__item:nth-child(8) {
-  animation-delay: 4s;
-}
-body .menu__item:nth-child(9) {
-  animation-delay: 4.5s;
-}
 body .section__menu {
   background-color: var(--main-color);
   position: relative;
   bottom: 50px;
+  margin-bottom: -50px;
   border-radius: 50px 50px 0px 0px;
   padding-bottom: 0px;
   padding: 35px 5% 0px 5%;
@@ -390,6 +351,7 @@ body .section__menu .section__menu__title {
   font-family: "Shrikhand", cursive;
   font-size: 1.14em;
   margin-bottom: 0px;
+  justify-content: space-between;
 }
 body .section__menu .section__menu__content {
   justify-content: left;
@@ -398,12 +360,14 @@ body .section__menu .section__menu__content {
   padding: initial;
   padding-bottom: 40px;
 }
-body .section__menu .section__menu__content h3 {
+body .section__menu .section__menu__content p {
   margin-bottom: 5px;
   font-weight: 300;
 }
 body .section__menu .section__menu__content .section__menu__content__title {
   border-bottom: 4px solid var(--tertiary-color);
+  font-weight: 600;
+  font-size: 1.05em;
 }
 body .section__menu .section__menu__content .section__menu__content__dishes {
   display: flex;
@@ -415,17 +379,33 @@ body .section__menu .section__menu__content .section__menu__content__dishes {
   margin-top: 15px;
   overflow: hidden;
   box-shadow: 0px 3px 13px rgba(128, 128, 128, 0.6784313725);
+  opacity: 0;
+  animation: appear 2s forwards;
 }
 body .section__menu .section__menu__content .section__menu__content__dishes:hover {
   box-shadow: 0px 3px 13px #747474;
+}
+body .section__menu .section__menu__content .section__menu__content__dishes:nth-child(3) {
+  animation-delay: 3s;
+}
+body .section__menu .section__menu__content .section__menu__content__dishes:nth-child(4) {
+  animation-delay: 2s;
+}
+body .section__menu .section__menu__content .section__menu__content__dishes:nth-child(5) {
+  animation-delay: 1s;
 }
 body .section__menu .section__menu__content .section__menu__content__dishes:hover .section__menu__content__dishes__price {
   margin-right: 0%;
   transition: 0.5s;
 }
+body .section__menu .section__menu__content .section__menu__content__dishes:hover .section__menu__content__dishes__description {
+  max-width: 63.5%;
+  transition: 0.5s;
+}
 body .section__menu .section__menu__content .section__menu__content__dishes .section__menu__content__dishes__description {
   overflow: hidden;
-  padding: 15px;
+  padding: 4% 0px 4% 4%;
+  max-width: 78%;
 }
 body .section__menu .section__menu__content .section__menu__content__dishes .section__menu__content__dishes__description .section__menu__content__dishes__description__h4 {
   margin: 0px;
@@ -450,6 +430,7 @@ body .section__menu .section__menu__content .section__menu__content__dishes .sec
   width: 30%;
   margin-right: -16%;
   transition: 0.5s;
+  padding-left: 2%;
 }
 body .section__menu .section__menu__content .section__menu__content__dishes .section__menu__content__dishes__price .section__menu__content__dishes__price__h4 {
   margin: 0px;
@@ -457,6 +438,7 @@ body .section__menu .section__menu__content .section__menu__content__dishes .sec
   font-weight: 600;
   padding: 0px 15px 15px 0px;
   overflow: visible;
+  width: 45%;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -464,7 +446,7 @@ body .section__menu .section__menu__content .section__menu__content__dishes .sec
 }
 body .section__menu .section__menu__content .section__menu__content__dishes .section__menu__content__dishes__price .section__menu__content__dishes__price__added {
   background-color: var(--tertiary-color);
-  width: 51%;
+  width: 60%;
   height: 100%;
   overflow: hidden;
   display: flex;
@@ -472,6 +454,10 @@ body .section__menu .section__menu__content .section__menu__content__dishes .sec
   justify-content: center;
   color: white;
   font-size: 1.3em;
+}
+body .section__menu .section__menu__button {
+  width: 40%;
+  margin: 0px;
 }
 
 :root {
@@ -484,6 +470,9 @@ body .section__menu .section__menu__content .section__menu__content__dishes .sec
   --tertiary-color: #99E2D0; /* var(--tertiary-color) */
   --banner-color: #EAEAEA; /* var(--banner-color) */
   --footer-color: #353535; /* var(--footer-color) */
+}
+:root section {
+  padding: 40px 5% 40px 5%;
 }
 :root h1 {
   font-size: 1.6em;
@@ -504,6 +493,7 @@ body .section__menu .section__menu__content .section__menu__content__dishes .sec
   margin-block-end: 0px;
 }
 :root .button {
+  display: inline-block;
   color: white;
   border-radius: 25px;
   padding: 15px 20px 15px 20px;

@@ -161,11 +161,8 @@ body {
 		text-align: left;
 	}
 
-	.section__landing__page {
-		padding: 35px 5% 35px 5%;
-	}
-	
 	.section__functioning {
+		background-color: white;
 
 		.section__functioning__steps {
 			background-color: var(--main-color);
@@ -245,7 +242,7 @@ body {
 						padding: 9px 11px 9px 11px;
 						border-radius: 2px;
 						position: absolute;
-						right: 35px;
+						right: 40px;
 						width: 20%;
 					}
 				}
