@@ -9,6 +9,10 @@ header {
         width: 50%;
         margin: 20px auto 20px auto;
         object-fit: contain;
+        @media all and (min-width: 1025px) {
+            width: 15%;
+            margin-bottom: 25px;
+        }
     }
 
     .header__div {
@@ -36,9 +40,15 @@ header {
         align-items: center;
         width: 100%;
         padding: 30px 0px 20px 0px;
+        @media all and (min-width: 1025px) {
+            padding-bottom: 0px;
+        }
 
         .header__menu__h1 {
             width: 70%;
+            @media all and (min-width: 1025px) {
+                font-size: 2.4em;
+            }
         }
 
         .header__menu__p {

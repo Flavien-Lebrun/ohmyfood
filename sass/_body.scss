@@ -137,6 +137,13 @@ body {
     flex-direction: column;
 	text-align: center;
 
+	section {
+		padding: 40px 5% 40px 5%;
+		@media all and (min-width: 1025px) {
+            padding: 40px 12% 40px 12%;
+        }
+	}
+
 	.loader__wrapper {
 		position: fixed;
 		top: 0;
@@ -145,7 +152,7 @@ body {
 		background: white;
 		z-index: 100;
 		opacity: 1;
-		animation: fadeOut 2s 4s forwards;
+		animation: fadeOut 1s 2.5s forwards;
 
 		.loader__wrapper__logo {
 			opacity: 0;
@@ -153,44 +160,56 @@ body {
 			top: 46%;
 			left: 25%;
 			position: fixed;
-			animation: fadeIn 2s forwards, upAndDown 2s 2s both;
+			animation: fadeIn 1s forwards, upAndDown 2s 0.5s both;
 		}
 	}
 
 	.section__title {
 		text-align: left;
+		@media all and (min-width: 1025px) {
+			font-size: 1.5em;
+		}
 	}
 
 	.section__functioning {
 		background-color: white;
 
 		.section__functioning__steps {
-			background-color: var(--main-color);
+			@media all and (min-width: 1025px) {
 			display: flex;
-			flex-direction: row;
-			align-items: center;
-			margin: 0px 0px 15px 5%;
-			padding: 7px 0px 7px 0px;
-			width: 95%;
-			border-radius: 20px;
-			@include shadow;
-			
-			.section__functioning__steps_number {
-			background-color: var(--primary-color);
-			border-radius: 15px;
-			padding: 4px 11px;
-			color: white;
-			position: absolute;
-			left: 5.5%;
-			font-weight: 500;
 			}
 
-			.section__functioning__steps_icon {
-				color: #7E7E7E;
-				margin: 0px 5% 0px 10%;
-				font-size: 1.2em;
-				&:hover {
+			.section__functioning__steps__options {
+				background-color: var(--main-color);
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				margin: 0px 0px 15px 5%;
+				padding: 7px 0px 7px 0px;
+				width: 95%;
+				border-radius: 20px;
+				@include shadow;
+				&:hover .section__functioning__steps__options__icon {
 					color: var(--primary-color);
+				}
+				@media all and (min-width: 1025px) {
+					margin: 0px 30px 15px 0px;
+				}
+				
+				.section__functioning__steps__options__number {
+					background-color: var(--primary-color);
+					border-radius: 15px;
+					padding: 4px 11px;
+					color: white;
+					position: absolute;
+					transform: translateX(-15px);
+					font-weight: 500;
+				}
+
+				.section__functioning__steps__options__icon {
+					color: #7E7E7E;
+					margin: 0px 5% 0px 10%;
+					font-size: 1.2em;
 				}
 			}
 		}
@@ -198,73 +217,87 @@ body {
 
 	.section__restaurants {
 		background-color: var(--main-color);
+		@media all and (min-width: 1025px) {
+			padding-bottom: 0px;
+		}
 
-		.section__restaurants__stores {
-			border-radius: 10px;
-			background-color: white;
-			display: flex;
-			justify-content: left;
-			flex-wrap: wrap;
-			margin-bottom: 20px;
-
-			.section__restaurants__stores__a {
-				width: 100%;
-
-				.section__restaurants__stores__a__div {
-					height: 180px;
-					width: 100%;
-					overflow: hidden;
-					border-radius: 15px 15px 0px 0px;
-					background-size: cover;
-					background-clip: border-box;
-					background-position: bottom;
-
-					&-1 {
-						background-image: url("../images/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
-					}
-
-					&-2 {
-						background-image: url("../images/stil-u2Lp8tXIcjw-unsplash.jpg");
-						background-position-y: -158px;
-					}
-
-					&-3 {
-						background-image: url("../images/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
-					}
-
-					&-4 {
-						background-image: url("../images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
-					}
-
-					.section__restaurants__stores__a__div__new {
-						background-color: var(--tertiary-color);
-						color: var(--button-text-color);
-						padding: 9px 11px 9px 11px;
-						border-radius: 2px;
-						position: absolute;
-						right: 40px;
-						width: 20%;
-					}
-				}
-			}	
-	
-			.section__restaurants__stores__a__description {
-				padding: 14px 5px 20px 14px;
-				width: 100%;
-				display: flex;
+		.section__restaurants__div {
+			@media all and (min-width: 1025px) {
 				flex-direction: row;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+			}
 
-				.section__restaurants__stores__a__description__text {
-					display: flex;
-					flex-direction: column;
-					text-align: left;
+			.section__restaurants__div__stores {
+				border-radius: 10px;
+				background-color: white;
+				display: flex;
+				justify-content: left;
+				flex-wrap: wrap;
+				margin-bottom: 20px;
+				@media all and (min-width: 1025px) {
+					width: 46%;
+					margin-bottom: 50px;
 				}
-				
+
+				.section__restaurants__div__stores__a {
+					width: 100%;
+
+					.section__restaurants__div__stores__a__div {
+						height: 180px;
+						width: 100%;
+						overflow: hidden;
+						border-radius: 15px 15px 0px 0px;
+						background-size: cover;
+						background-clip: border-box;
+						background-position: bottom;
+
+						&-1 {
+							background-image: url("../images/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+						}
+
+						&-2 {
+							background-image: url("../images/stil-u2Lp8tXIcjw-unsplash.jpg");
+							background-position-y: -158px;
+						}
+
+						&-3 {
+							background-image: url("../images/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+						}
+
+						&-4 {
+							background-image: url("../images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+						}
+
+						.section__restaurants__div__stores__a__div__new {
+							background-color: var(--tertiary-color);
+							color: var(--button-text-color);
+							padding: 9px 13px 9px 13px;
+							border-radius: 2px;
+							position: absolute;
+							right: 10%;
+						}
+					}
+				}	
+		
+				.section__restaurants__div__stores__a__description {
+					padding: 14px 5px 20px 14px;
+					width: 100%;
+					display: flex;
+					flex-direction: row;
+
+					.section__restaurants__div__stores__a__description__text {
+						display: flex;
+						flex-direction: column;
+						text-align: left;
+					}
+				}
 			}
 		}
 	}
 
-	.section__restaurants__stores__a__description__div {
+	.section__restaurants__div__stores__a__description__div {
 		font-size: 1.5em;
 		margin: auto 15px auto 30px;
 
@@ -277,7 +310,7 @@ body {
 	.favorite {
 		position: absolute;
 		opacity: 0;
-		&:checked +.section__restaurants__stores__a__description__div--transparent {
+		&:checked +.section__restaurants__div__stores__a__description__div--transparent {
 			@include gradient-reversed;
 			animation: fadeIn 0.5s forwards;
 			background-clip: text;
@@ -325,3 +358,40 @@ body {
 		height: 1001px;
 	}
 }
+
+@media all and (min-width: 500px) and (max-width: 767px) {
+	
+	body {
+		
+		.section__functioning {
+			
+			.section__functioning__steps {
+				
+				.section__functioning__steps_number {
+					left: 6.5%;
+					background-color: red;
+				}
+			}
+		}
+		
+		footer {
+			background-color: red;
+		}
+	}
+	
+	
+}
+	
+@media all and (min-width: 768px) and (max-width: 1024px) {
+	footer {
+		background-color: blue;
+	}
+}
+
+@media all and (min-width: 1025px) {
+	footer {
+		background-color: green;
+	}
+}
+
+

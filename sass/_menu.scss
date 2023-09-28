@@ -35,10 +35,7 @@ body {
         background-color: var(--main-color);
         position: relative;
         bottom: 50px;
-        margin-bottom: -50px;
         border-radius: 50px 50px 0px 0px;
-        padding-bottom: 0px;
-        padding: 35px 5% 0px 5%;
 		
 		.section__menu__title {
 			display: flex;
@@ -81,11 +78,11 @@ body {
                 animation: appear 2s forwards;
 
                 &:nth-child(3) {
-                    animation-delay: 3s;
+                    animation-delay: 2s;
                 }
 
                 &:nth-child(4) {
-                    animation-delay: 2s;
+                    animation-delay: 1.5s;
                 }
 
                 &:nth-child(5) {
@@ -159,4 +156,8 @@ body {
             margin: 0px;
         }
 	}
+
+    #no__padding__bottom {
+        padding-bottom: 0px;
+    }
 }
