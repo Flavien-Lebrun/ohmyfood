@@ -161,6 +161,11 @@ body {
 			left: 25%;
 			position: fixed;
 			animation: fadeIn 1s forwards, upAndDown 2s 0.5s both;
+			@media all and (min-width: 1025px) {
+				width: 30%;
+				top: 46%;
+				left: 35%;
+			}
 		}
 	}
 
@@ -265,6 +270,9 @@ body {
 						background-size: cover;
 						background-clip: border-box;
 						background-position: center;
+						@media all and (min-width: 600px) and (max-width: 1024px) {
+							height: 300px;
+						}
 
 						&-1 {
 							background-image: url("../images/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
@@ -349,7 +357,7 @@ body {
 		align-items: start;
 		@media all and (min-width: 1025px) {
 			flex-direction: row-reverse;
-			padding: 50px 50px 30px 30px;
+			padding: 60px 50px 30px 30px;
 		}
 
 		.footer__logo {
@@ -407,25 +415,6 @@ body {
 				}
 			}
 		}
-	}
-
-	.length-to-remove-before-delivering {
-		height: 1001px;
-	}
-}
-
-@media all and (min-width: 500px) and (max-width: 767px) {
-}
-
-@media all and (min-width: 768px) and (max-width: 1024px) {
-	footer {
-		background-color: blue;
-	}
-}
-
-@media all and (min-width: 1025px) {
-	footer {
-		background-color: green;
 	}
 }
 
