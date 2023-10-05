@@ -29,6 +29,9 @@ body {
 	.menu__image {
         width: 100%;
         height: 260px;
+        @media all and (min-width: 1025px) {
+            height: 400px;
+        }
     }
 
 	.section__menu {

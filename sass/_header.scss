@@ -9,6 +9,9 @@ header {
         width: 50%;
         margin: 20px auto 20px auto;
         object-fit: contain;
+        @media all and (min-width: 600px) and (max-width: 1024px) {
+            width: 20%;
+        }
         @media all and (min-width: 1025px) {
             width: 15%;
             margin-bottom: 25px;

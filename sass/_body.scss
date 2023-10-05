@@ -140,7 +140,7 @@ body {
 	section {
 		padding: 40px 5% 40px 5%;
 		@media all and (min-width: 1025px) {
-            padding: 40px 12% 40px 12%;
+            padding: 40px 9.5% 40px 9.5%;
         }
 	}
 
@@ -171,12 +171,18 @@ body {
 		}
 	}
 
+	#Restaurants {
+		@media all and (min-width: 1025px) {
+			margin: 0px;
+		}
+	}
+
 	.section__functioning {
 		background-color: white;
 
 		.section__functioning__steps {
 			@media all and (min-width: 1025px) {
-			display: flex;
+				display: flex;
 			}
 
 			.section__functioning__steps__options {
@@ -238,7 +244,14 @@ body {
 				margin-bottom: 20px;
 				@media all and (min-width: 1025px) {
 					width: 46%;
-					margin-bottom: 50px;
+					margin-top: 20px;
+    				margin-bottom: 35px;
+				}
+
+				#section__restaurants__div__stores--bottom {
+					@media all and (min-width: 1025px) {
+						margin-bottom: 30px;
+					}
 				}
 
 				.section__restaurants__div__stores__a {
@@ -247,11 +260,11 @@ body {
 					.section__restaurants__div__stores__a__div {
 						height: 180px;
 						width: 100%;
-						overflow: hidden;
+						overflow: clip;
 						border-radius: 15px 15px 0px 0px;
 						background-size: cover;
 						background-clip: border-box;
-						background-position: bottom;
+						background-position: center;
 
 						&-1 {
 							background-image: url("../images/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
@@ -275,8 +288,17 @@ body {
 							color: var(--button-text-color);
 							padding: 9px 13px 9px 13px;
 							border-radius: 2px;
-							position: absolute;
-							right: 10%;
+							font-weight: 600;
+							font-size: 1.05em;
+							width: 20%;
+							position: relative;
+							left: 68%;
+							top: 8%;
+							@media all and (min-width: 600px) and (max-width: 1024px) {
+								width: 12%;
+								left: 80%;
+								top: 9%;
+							}
 						}
 					}
 				}	
@@ -325,30 +347,63 @@ body {
 		display: flex;
 		flex-direction: column;
 		align-items: start;
+		@media all and (min-width: 1025px) {
+			flex-direction: row-reverse;
+			padding: 50px 50px 30px 30px;
+		}
 
 		.footer__logo {
 			font-family: 'Shrikhand', cursive;
 			margin-bottom: 8px;
+			@media all and (min-width: 1025px) {
+				margin-bottom: 0px;
+				font-size: 1em;
+			}
 		}
 
 		.footer__div {
-			display: flex;
-			flex-direction: row;
 			width: 100%;
-			margin-top: 7px;
-
-
-			.footer__div__i {
+			@media all and (min-width: 1025px) {
+				flex-direction: row;
 				display: flex;
-				align-items: center;
-				margin-right: 5%;
+				justify-content: end;
+				width: 700px;
+			}
 
-				&--ustensils {
-					font-size: 0.9em;
+			.footer__div__div {
+				display: flex;
+				flex-direction: row;
+				width: 100%;
+				margin-top: 7px;
+				@media all and (min-width: 1025px) {
+					width: 210px;
 				}
 
-				&--handshake {
-					font-size: 0.7em;
+				.footer__div__div__i {
+					display: flex;
+					align-items: center;
+					margin-right: 25px;
+					@media all and (min-width: 1025px) {
+						margin-right: 10px;
+					}
+
+					&--ustensils {
+						font-size: 0.9em;
+					}
+
+					&--handshake {
+						font-size: 0.7em;
+					}
+				}
+			}
+			
+			.footer__div__a {
+				display: flex;
+				flex-direction: row;
+				width: 100%;
+				margin-top: 7px;
+				@media all and (min-width: 1025px) {
+					width: 140px;
 				}
 			}
 		}
@@ -360,28 +415,8 @@ body {
 }
 
 @media all and (min-width: 500px) and (max-width: 767px) {
-	
-	body {
-		
-		.section__functioning {
-			
-			.section__functioning__steps {
-				
-				.section__functioning__steps_number {
-					left: 6.5%;
-					background-color: red;
-				}
-			}
-		}
-		
-		footer {
-			background-color: red;
-		}
-	}
-	
-	
 }
-	
+
 @media all and (min-width: 768px) and (max-width: 1024px) {
 	footer {
 		background-color: blue;
