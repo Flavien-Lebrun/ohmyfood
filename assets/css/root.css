@@ -278,6 +278,19 @@ body .section__restaurants .section__restaurants__div .section__restaurants__div
     top: 9%;
   }
 }
+@media all and (min-width: 1025px) and (max-width: 1400px) {
+  body .section__restaurants .section__restaurants__div .section__restaurants__div__stores .section__restaurants__div__stores__a .section__restaurants__div__stores__a__div .section__restaurants__div__stores__a__div__new {
+    width: 17%;
+    left: 72%;
+  }
+}
+@media all and (min-width: 1401px) {
+  body .section__restaurants .section__restaurants__div .section__restaurants__div__stores .section__restaurants__div__stores__a .section__restaurants__div__stores__a__div .section__restaurants__div__stores__a__div__new {
+    width: 14%;
+    left: 79%;
+    top: 9%;
+  }
+}
 body .section__restaurants .section__restaurants__div .section__restaurants__div__stores .section__restaurants__div__stores__a__description {
   padding: 14px 5px 20px 14px;
   width: 100%;
@@ -607,7 +620,7 @@ body .section__menu .section__menu__content .section__menu__content__dishes .sec
 @media all and (min-width: 1025px) {
   body .section__menu .section__menu__content .section__menu__content__dishes .section__menu__content__dishes__price {
     width: 25%;
-    margin-right: -14%;
+    margin-right: -14.5%;
   }
 }
 body .section__menu .section__menu__content .section__menu__content__dishes .section__menu__content__dishes__price .section__menu__content__dishes__price__h4 {
