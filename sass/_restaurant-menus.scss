@@ -100,14 +100,70 @@ body {
                 opacity: 0;
                 animation: appear 2s forwards;
 
+                &--starters {
+                    &:nth-child(3) {
+                        animation-delay: 1s;
+                    }
+    
+                    &:nth-child(4) {
+                        animation-delay: 1.5s;
+                    }
+    
+                    &:nth-child(5) {
+                        animation-delay: 2s;
+                    }
+    
+                    &:nth-child(6) {
+                        animation-delay: 2.25s;
+                    }
+                }
+
+                &--mains {
+                    &:nth-child(3) {
+                        animation-delay: 2.5s;
+                    }
+    
+                    &:nth-child(4) {
+                        animation-delay: 3s;
+                    }
+    
+                    &:nth-child(5) {
+                        animation-delay: 3.5s;
+                    }
+    
+                    &:nth-child(6) {
+                        animation-delay: 3.75s;
+                    }
+                }
+    
+                &--desserts {
+                    &:nth-child(3) {
+                        animation-delay: 4s;
+                    }
+    
+                    &:nth-child(4) {
+                        animation-delay: 4.5s;
+                    }
+    
+                    &:nth-child(5) {
+                        animation-delay: 5s;
+                    }
+    
+                    &:nth-child(6) {
+                        animation-delay: 5.25s;
+                    }
+                }
+
                 &:hover .section__menu__content__dishes__price {
                     margin-right: 0%;
                     transition: 0.5s;
                 }
 
-                &:hover .section__menu__content__dishes__description {
-                    max-width: 55%;
-                    transition: 0.5s;
+                @media all and (max-width: 649px) {
+                    &:hover .section__menu__content__dishes__description {
+                        max-width: 55%;
+                        transition: 0.5s;
+                    }
                 }
 
                 .section__menu__content__dishes__description {
@@ -136,7 +192,7 @@ body {
                     display: flex;
                     align-items: end;
                     width: 39%;
-                    margin-right: -21%;
+                    margin-right: -23%;
                     transition: 0.5s;
                     padding-left: 2%;
                     @media all and (min-width: 650px) and (max-width: 1024px) {
@@ -152,68 +208,28 @@ body {
                         margin: 0px;
                         font-size: 1.2em;
                         font-weight: 600;
-                        padding: 0px 15px 15px 0px;
-                        overflow: visible;
+                        padding: 0px 0px 15px 0px;
                         width: 45%;
                         @include ellipsis;
+                        @media all and (min-width: 650px) {
+                            padding: 0px 15px 15px 0px;
+                        }
                         @media all and (min-width: 1025px) {
                             width: 38%;
                         }
                     }
                         
                     .section__menu__content__dishes__price__added {
-                    background-color: var(--tertiary-color);
-                    width: 60%;
-                    height: 100%;
-                    overflow: hidden;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    color: white;
-                    font-size: 1.3em;                
+                        background-color: var(--tertiary-color);
+                        width: 60%;
+                        height: 100%;
+                        overflow: hidden;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: white;
+                        font-size: 1.3em;                
                     }
-                }
-            }
-
-            #starters {
-                &:nth-child(3) {
-                    animation-delay: 1s;
-                }
-
-                &:nth-child(4) {
-                    animation-delay: 1.5s;
-                }
-
-                &:nth-child(5) {
-                    animation-delay: 2s;
-                }
-            }
-
-            #mains {
-                &:nth-child(3) {
-                    animation-delay: 2.5s;
-                }
-
-                &:nth-child(4) {
-                    animation-delay: 3s;
-                }
-
-                &:nth-child(5) {
-                    animation-delay: 3.5s;
-                }
-            }
-
-            #desserts {
-                &:nth-child(3) {
-                    animation-delay: 4s;
-                }
-
-                &:nth-child(4) {
-                    animation-delay: 4.5s;
-                }
-
-                &:nth-child(5) {
-                    animation-delay: 5s;
                 }
             }
         }
