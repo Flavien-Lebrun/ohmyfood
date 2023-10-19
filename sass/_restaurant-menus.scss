@@ -100,25 +100,13 @@ body {
                 opacity: 0;
                 animation: appear 2s forwards;
 
-                &:nth-child(3) {
-                    animation-delay: 2s;
-                }
-
-                &:nth-child(4) {
-                    animation-delay: 1.5s;
-                }
-
-                &:nth-child(5) {
-                    animation-delay: 1s;
-                }
-
                 &:hover .section__menu__content__dishes__price {
                     margin-right: 0%;
                     transition: 0.5s;
                 }
 
                 &:hover .section__menu__content__dishes__description {
-                    max-width: 63.5%;
+                    max-width: 55%;
                     transition: 0.5s;
                 }
 
@@ -184,6 +172,48 @@ body {
                     color: white;
                     font-size: 1.3em;                
                     }
+                }
+            }
+
+            #starters {
+                &:nth-child(3) {
+                    animation-delay: 1s;
+                }
+
+                &:nth-child(4) {
+                    animation-delay: 1.5s;
+                }
+
+                &:nth-child(5) {
+                    animation-delay: 2s;
+                }
+            }
+
+            #mains {
+                &:nth-child(3) {
+                    animation-delay: 2.5s;
+                }
+
+                &:nth-child(4) {
+                    animation-delay: 3s;
+                }
+
+                &:nth-child(5) {
+                    animation-delay: 3.5s;
+                }
+            }
+
+            #desserts {
+                &:nth-child(3) {
+                    animation-delay: 4s;
+                }
+
+                &:nth-child(4) {
+                    animation-delay: 4.5s;
+                }
+
+                &:nth-child(5) {
+                    animation-delay: 5s;
                 }
             }
         }
